@@ -123,4 +123,5 @@
     <string name="settings_github">Github</string>
     <string name="settings_community">Community</string>
     <string name="settings_licenses">Licenses</string>
+    <string name="settings_rules_time">Time rules</string>
 </resources>

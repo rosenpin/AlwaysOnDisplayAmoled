@@ -31,6 +31,7 @@ import android.widget.ListView;
 import com.tomer.alwayson.Receivers.DAReceiver;
 import com.tomer.alwayson.Services.StarterService;
 import com.tomer.alwayson.Views.FeaturesDialog;
+import com.tomer.alwayson.Views.TimePickerPreference;
 
 import java.util.List;
 
@@ -61,6 +62,7 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
         findPreference("notifications_alerts").setOnPreferenceChangeListener(this);
         findPreference("watchface").setOnPreferenceClickListener(this);
         findPreference("textcolor").setOnPreferenceClickListener(this);
+        findPreference("rules_time").setOnPreferenceClickListener(this);
         checkNotificationsPermission(context, false);
         starterService = new Intent(getActivity().getApplicationContext(), StarterService.class);
         Log.d(String.valueOf(((ListPreference) findPreference("rules")).getValue()), " Selected");
@@ -292,6 +294,10 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
             featuresDialog.show();
         } else if (preference.getKey().equals("textcolor")) {
             Globals.colorDialog.show();
+        }
+        else if (preference.getKey().equals("rules_time")){
+            new TimePickerPreference(getActivity())
+                    .show();
         }
         return true;
     }

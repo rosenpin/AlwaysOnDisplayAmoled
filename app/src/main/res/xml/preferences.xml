@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceCategory android:title="@string/settings_general">
         <SwitchPreference
             android:defaultValue="true"
@@ -46,6 +45,12 @@
                     android:key="battery_rules"
                     android:summary="%s"
                     android:title="@string/settings_rules_battery" />
+
+                <Preference
+                    android:key="rules_time"
+                    android:title="@string/settings_rules_time">
+
+                </Preference>
             </PreferenceCategory>
         </PreferenceScreen>
     </PreferenceCategory>
